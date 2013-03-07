@@ -14,6 +14,8 @@ import javax.persistence.Id
 class EntityWithError(id: UUID, _name: String) extends Parent(id) {
 
   @Column(name = "name") var name = _name
+
+  def this() = this(UUID.randomUUID(), "")
 }
 
 @MappedSuperclass
